@@ -34,7 +34,7 @@ export type GigData = {
 export const columns: ColumnDef<GigData>[] = [
     {
         accessorKey: "gig",
-        header: () => <div>Gig</div>,
+        header: () => <div>Ordenes</div>,
         cell: ({ row }) => {
             return (
                 <Link className="flex items-center space-x-2" href={`/sellers`}>
@@ -55,11 +55,11 @@ export const columns: ColumnDef<GigData>[] = [
     },
     {
         accessorKey: "orders",
-        header: "Orders",
+        header: "Ordenes",
     },
     {
         accessorKey: "revenue",
-        header: () => <div className="text-right">Revenue</div>,
+        header: () => <div className="text-right">Ganancia</div>,
         cell: ({ row }) => {
             const amount = parseFloat(row.getValue("revenue"))
             const formatted = new Intl.NumberFormat("en-US", {

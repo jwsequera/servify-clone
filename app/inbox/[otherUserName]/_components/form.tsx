@@ -60,7 +60,7 @@ const Form = ({
             >
                 <div className="relative w-full">
                     <input
-                        placeholder={"Enter message..."}
+                        placeholder={"Agregar mensaje..."}
                         className="
                             text-black
                             font-light

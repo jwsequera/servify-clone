@@ -32,15 +32,15 @@ const GigPage = ({
     const reviewsFull = useQuery(api.reviews.getFullByGig, { gigId: params.gigId as Id<"gigs"> });
 
     if (gig === undefined || reviews === undefined || reviewsFull === undefined || categoryAndSubcategory === undefined || offers == undefined) {
-        return <div>Loading...</div>
+        return <div>Cargando...</div>
     }
 
     if (gig === null || categoryAndSubcategory === null || offers === null) {
-        return <div>Not found</div>
+        return <div>No encontrado</div>
     }
 
     if (gig.published === false) {
-        return <div>This gig is not published</div>
+        return <div>Este servicio no esta publicado</div>
     }
 
     const editUrl = `/seller/${gig.seller.username}/manage-gigs/edit/${gig._id}`
@@ -74,9 +74,9 @@ const GigPage = ({
                     <div className="border border-zinc-400 p-4 space-y-2 rounded-2xl">
                         <div className="flex space-x-2">
                             <Info />
-                            <h4>Delivery preferences</h4>
+                            <h4>Preferencias de entrega</h4>
                         </div>
-                        <p>Please communicate any preferences or concerns regarding the utilization of AI tools in the fulfillment and/or delivery of your request.</p>
+                        <p>Comunique cualquier preferencia o inquietud con respecto a la utilización de herramientas de inteligencia artificial en el cumplimiento y/o entrega de su solicitud.</p>
                     </div>
                     <SellerDetails
                         seller={gig.seller}

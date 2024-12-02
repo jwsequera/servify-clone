@@ -36,8 +36,8 @@ const StripeAccountSetupComplete = ({ params }: StripeAccountSetupCompleteProps)
 
     return (
         <div>
-            <h1>Stripe Account Setup Complete</h1>
-            <h3>This page will redirect shortly...</h3>
+            <h1>Configuración de la cuenta de Stripe completa</h1>
+            <h3>Esta página redirigirá en breve...</h3>
             <Loading />
         </div>
     );

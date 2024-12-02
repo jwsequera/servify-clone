@@ -40,13 +40,13 @@ const ManageGigs = () => {
         <>
             <div className="flex items-center">
                 <div className="space-y-2">
-                    <h1 className="text-4xl font-semibold">Gigs</h1>
+                    <h1 className="text-4xl font-semibold">Servicios</h1>
                     <p className="text-muted-foreground">
-                        Manage, create and edit your gigs and offers.
+                        Gestiona, crea y edita tus conciertos y ofertas.
                     </p>
                 </div>
                 <Button className="ml-auto" variant={"blue"}>
-                    <Link href={`/seller/${currentUser?.username}/manage-gigs/create`}>Create</Link>
+                    <Link href={`/seller/${currentUser?.username}/manage-gigs/create`}>Crear</Link>
                 </Button>
             </div>
             <Separator className="my-6" />

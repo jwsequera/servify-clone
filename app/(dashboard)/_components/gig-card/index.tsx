@@ -70,7 +70,7 @@ export const GigCard = ({
 
     if (seller === null) {
         return <div>
-            Seller not found
+            Profesional no encontrado
         </div>
     }
 

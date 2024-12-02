@@ -25,7 +25,7 @@ export const Sidebar = ({
             <Link href="/">
                 <div className="flex items-center gap-x-6 w-full">
                     <Image
-                        src="/logo.svg"
+                        src="/logo.jpg"
                         alt="Logo"
                         height={60}
                         width={60}
@@ -34,7 +34,7 @@ export const Sidebar = ({
                         "font-semibold text-2xl",
                         font.className,
                     )}>
-                        Givian
+                        Chat
                     </span>
                 </div>
             </Link>

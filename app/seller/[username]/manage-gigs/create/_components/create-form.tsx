@@ -97,12 +97,12 @@ export const CreateForm = ({
                     name="title"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Title</FormLabel>
+                            <FormLabel>Titulo</FormLabel>
                             <FormControl>
-                                <Input placeholder="I will do something amazing" {...field} />
+                                <Input placeholder="Haré algo asombroso" {...field} />
                             </FormControl>
                             <FormDescription>
-                                Craft a keyword-rich Gig title to attract potential buyers.
+                                Cree un título de servicio rico en palabras clave para atraer compradores potenciales.
                             </FormDescription>
                             <FormMessage />
                         </FormItem>
@@ -113,7 +113,7 @@ export const CreateForm = ({
                     name="category"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Category</FormLabel>
+                            <FormLabel>Categoria</FormLabel>
                             <Select
                                 onValueChange={(categoryName: string) => {
                                     field.onChange(categoryName);
@@ -123,7 +123,7 @@ export const CreateForm = ({
                             >
                                 <FormControl>
                                     <SelectTrigger>
-                                        <SelectValue placeholder="Select a category" />
+                                        <SelectValue placeholder="Selecciona una categoria" />
                                     </SelectTrigger>
                                 </FormControl>
                                 {categories && (
@@ -137,7 +137,7 @@ export const CreateForm = ({
                                 )}
                             </Select>
                             <FormDescription>
-                                Select a category most relevant to your service.
+                                Seleccione la categoría más relevante para su servicio.
                             </FormDescription>
                             <FormMessage />
                         </FormItem>
@@ -148,11 +148,11 @@ export const CreateForm = ({
                     name="subcategoryId"
                     render={({ field }) => (
                         <FormItem>
-                            <FormLabel>Subcategory</FormLabel>
+                            <FormLabel>Subcategoría</FormLabel>
                             <Select onValueChange={field.onChange} defaultValue={field.value}>
                                 <FormControl>
                                     <SelectTrigger>
-                                        <SelectValue placeholder="Select a subcategory" />
+                                        <SelectValue placeholder="Selecciona una subcategoría" />
                                     </SelectTrigger>
                                 </FormControl>
                                 <SelectContent>
@@ -164,13 +164,13 @@ export const CreateForm = ({
                                 </SelectContent>
                             </Select>
                             <FormDescription>
-                                Subcategory will help buyers pinpoint your service more narrowly.
+                                La subcategoría ayudará a los compradores a identificar su servicio de manera más precisa.
                             </FormDescription>
                             <FormMessage />
                         </FormItem>
                     )}
                 />
-                <Button type="submit" disabled={pending}>Save</Button>
+                <Button type="submit" disabled={pending}>Guardar</Button>
             </form>
         </Form>
     )

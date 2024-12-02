@@ -15,15 +15,15 @@ const ConversationList = () => {
     const currentUser = useQuery(api.users.getCurrentUser);
 
     if (conversations === undefined) {
-        return <div>Loading...</div>
+        return <div>Cargando...</div>
     }
 
     if (currentUser === undefined) {
-        return <div>Loading...</div>
+        return <div>Cargando...</div>
     }
 
     if (currentUser === null) {
-        return <div>Error: Not Found</div>
+        return <div>Error: No Encontrado</div>
     }
 
     const userConversations = conversations.filter((conversation) => {
@@ -32,7 +32,7 @@ const ConversationList = () => {
 
     return (
         <>
-            <p className="text-zinc-300 font-medium pl-4 py-4">All conversations</p>
+            <p className="text-zinc-300 font-medium pl-4 py-4">Todas las conversaciones</p>
             <div className="space-y-3">
                 {userConversations.map((conversation) => (
                     <ConversationBox

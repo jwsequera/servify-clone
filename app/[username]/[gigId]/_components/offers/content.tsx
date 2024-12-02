@@ -26,12 +26,12 @@ export const Content = ({
 
     if (currentUser === undefined || seller === undefined) return <Loading />;
 
-    if (seller === null) return <div>Not found</div>;
+    if (seller === null) return <div>No encontrado</div>;
 
     const handleOrderNow = async () => {
         try {
             const url = await orderNow({ priceId: offer.stripePriceId, title: offer.title, sellerId });
-            if (!url) throw new Error("Error: Stripe session error.");
+            if (!url) throw new Error("Error: Error en la sesión de Stripe.");
             router.push(url);
         } catch (error: any) {
             toast.error(error.message);
@@ -53,7 +53,7 @@ export const Content = ({
             <div className="flex flex-col font-semibold text-zinc-700 space-y-2">
                 <div className="flex space-x-2">
                     <Clock />
-                    <p>{offer.delivery_days} Days Delivery</p>
+                    <p>{offer.delivery_days} Entrega en días</p>
                 </div>
                 <div className="flex space-x-2">
                     <RefreshCcw />
@@ -62,14 +62,14 @@ export const Content = ({
             </div>
             {(currentUser?._id !== sellerId) && (
                 <>
-                    <Button className="w-full" onClick={handleOrderNow}>Order Now</Button>
-                    <Button className="w-full" onClick={handleSendMessage} variant={"ghost"}>Send Message</Button>
+                    <Button className="w-full" onClick={handleOrderNow}>Ordene ahora</Button>
+                    <Button className="w-full" onClick={handleSendMessage} variant={"ghost"}>Enviar mensaje</Button>
                 </>
             )}
             {(currentUser?._id === sellerId) && (
                 <Button className="w-full">
                     <Link href={editUrl}>
-                        Edit
+                        Editar
                     </Link>
                 </Button>
             )}

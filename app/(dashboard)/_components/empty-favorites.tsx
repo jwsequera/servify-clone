@@ -10,10 +10,10 @@ export const EmptyFavorites = () => {
                 height={340}
             />
             <h2 className="text-2xl font-semibold mt-6">
-                No favorite gigs!
+                !No tienes favoritos!
             </h2>
             <p className="text-muted-foreground text-sm mt-2">
-                Try favoriting a gig!
+                ¡Guarda tus servicios favoritos para tenerlos siempre a mano!
             </p>
         </div>
     );

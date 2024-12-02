@@ -49,28 +49,28 @@ export const ContentEditor = ({
     return (
         <div className="space-y-4">
             <div>
-                <Label htmlFor="title">Title:</Label>
-                <Input id="title" placeholder="title" value={title} onChange={(e) => setTitle(e.target.value)} />
+                <Label htmlFor="title">Título:</Label>
+                <Input id="title" placeholder="título" value={title} onChange={(e) => setTitle(e.target.value)} />
             </div>
             <div className="">
-                <Label htmlFor="price">Price (USD):</Label>
-                <Input id="price" placeholder="price" type="number" value={price} onChange={(e) => setPrice(parseInt(e.target.value))} />
+                <Label htmlFor="price">Precio (USD):</Label>
+                <Input id="price" placeholder="precio" type="number" value={price} onChange={(e) => setPrice(parseInt(e.target.value))} />
             </div>
             <div>
-                <Label htmlFor="description">Description:</Label>
-                <Input id="description" placeholder="description" value={description} onChange={(e) => setDescription(e.target.value)} />
+                <Label htmlFor="description">Descripción:</Label>
+                <Input id="description" placeholder="descripción" value={description} onChange={(e) => setDescription(e.target.value)} />
             </div>
             <div>
-                <Label htmlFor="delivery">Number of days for delivery:</Label>
-                <Input id="delivery" placeholder="delivery days" type="number" value={deliveryDays} onChange={(e) => setDeliveryDays(parseInt(e.target.value))} />
+                <Label htmlFor="delivery">Número de días para la entrega:</Label>
+                <Input id="delivery" placeholder="número de días para la entrega" type="number" value={deliveryDays} onChange={(e) => setDeliveryDays(parseInt(e.target.value))} />
             </div>
             <div>
-                <Label htmlFor="revisions">Number of revisions:</Label>
+                <Label htmlFor="revisions">Número de revisiones:</Label>
                 <Input id="revisions" placeholder="revisions" type="number" value={revisions} onChange={(e) => setRevisions(parseInt(e.target.value))} />
             </div>
 
 
-            <Button className="w-full" onClick={handleSave}>Save</Button>
+            <Button className="w-full" onClick={handleSave}>Guardar</Button>
         </div>
     )
 }

@@ -24,11 +24,11 @@ const SellerPage = ({
     const reviews = useQuery(api.reviews.getBySellerName, { sellerName: params.username });
 
     if (seller === undefined || reviews === undefined || skills === undefined || gigs === undefined) {
-        return <div>Loading...</div>
+        return <div>Cargando...</div>
     }
 
     if (seller === null || gigs === null) {
-        return <div>Not found</div>
+        return <div>No encontrado</div>
     }
 
     const skillsString = skills ? skills.map((skill) => skill.skill).join(", ") : "";
@@ -42,11 +42,11 @@ const SellerPage = ({
                         reviews={reviews}
                     />
                     <div>
-                        <p className="font-bold">About me</p>
+                        <p className="font-bold">Acerca de mi</p>
                         <p>{seller.about}</p>
                     </div>
                     <div>
-                        <p className="font-bold">Skills</p>
+                        <p className="font-bold">Habilidades</p>
                         <p>{skillsString}</p>
                     </div>
                 </div>

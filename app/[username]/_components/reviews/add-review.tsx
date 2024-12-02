@@ -30,22 +30,22 @@ interface AddReviewProps {
 
 const formSchema = z.object({
     comment: z.string().min(5, {
-        message: "Comment must be at least 5 characters.",
+        message: "El comentario debe tener al menos 5 caracteres..",
     }),
     service_as_described: z.number().min(1, {
-        message: "Service as described must be at least 1.",
+        message: "El servicio descrito debe ser de al menos 1.",
     }).max(5, {
-        message: "Service as described must be at most 5.",
+        message: "El servicio descrito debe ser como máximo 5.",
     }),
     recommend_to_a_friend: z.number().min(1, {
-        message: "Recommend to a friend must be at least 1.",
+        message: "Recomendar a un amigo debe ser al menos 1.",
     }).max(5, {
-        message: "Recommend to a friend must be at most 5.",
+        message: "Recomendar a un amigo debe tener como máximo 5.",
     }),
     communication_level: z.number().min(1, {
-        message: "Communication level must be at least 1.",
+        message: "El nivel de comunicación debe ser al menos 1.",
     }).max(5, {
-        message: "Communication level must be at most 5.",
+        message: "El nivel de comunicación debe ser al menos 1.",
     }),
 });
 
@@ -101,12 +101,12 @@ export const AddReview = ({
                         name="comment"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Comment</FormLabel>
+                                <FormLabel>Comentario</FormLabel>
                                 <FormControl>
-                                    <Input placeholder="Enter your comment" {...field} />
+                                    <Input placeholder="Ingresa tu comentario" {...field} />
                                 </FormControl>
                                 <FormDescription>
-                                    Leave review comment.
+                                    Deja un comentario de Reseña
                                 </FormDescription>
                                 <FormMessage />
                             </FormItem>
@@ -119,14 +119,14 @@ export const AddReview = ({
                         name="service_as_described"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Service As Described</FormLabel>
+                                <FormLabel>Descripción del Servicio</FormLabel>
                                 <FormControl>
-                                    <Input type="number" min="1" max="5" placeholder="Rate from 1 to 5" {...field}
+                                    <Input type="number" min="1" max="5" placeholder="Califica del 1 al 5" {...field}
                                         onChange={(e) => field.onChange(parseInt(e.target.value))}
                                     />
                                 </FormControl>
                                 <FormDescription>
-                                    Rate how accurately the service was described.
+                                    Califique con qué precisión se describió el servicio.
                                 </FormDescription>
                                 <FormMessage />
                             </FormItem>
@@ -139,12 +139,12 @@ export const AddReview = ({
                         name="recommend_to_a_friend"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Recommend to a Friend</FormLabel>
+                                <FormLabel>Recomendar a un amigo</FormLabel>
                                 <FormControl>
-                                    <Input type="number" min="1" max="5" placeholder="Rate from 1 to 5" {...field} onChange={(e) => field.onChange(parseInt(e.target.value))} />
+                                    <Input type="number" min="1" max="5" placeholder="Califica del 1 al 5" {...field} onChange={(e) => field.onChange(parseInt(e.target.value))} />
                                 </FormControl>
                                 <FormDescription>
-                                    Would you recommend our service to a friend?
+                                    ¿Recomendarías nuestro servicio a un amigo?
                                 </FormDescription>
                                 <FormMessage />
                             </FormItem>
@@ -157,19 +157,19 @@ export const AddReview = ({
                         name="communication_level"
                         render={({ field }) => (
                             <FormItem>
-                                <FormLabel>Communication Level</FormLabel>
+                                <FormLabel>Nivel de comunicación</FormLabel>
                                 <FormControl>
-                                    <Input type="number" min="1" max="5" placeholder="Rate from 1 to 5" {...field} onChange={(e) => field.onChange(parseInt(e.target.value))} />
+                                    <Input type="number" min="1" max="5" placeholder="Califica del 1 al 5" {...field} onChange={(e) => field.onChange(parseInt(e.target.value))} />
                                 </FormControl>
                                 <FormDescription>
-                                    Rate the level of communication received.
+                                    Califique el nivel de comunicación recibida.
                                 </FormDescription>
                                 <FormMessage />
                             </FormItem>
                         )}
                     />
 
-                    <Button type="submit">Submit</Button>
+                    <Button type="submit">Enviar</Button>
                 </form>
             </Form>
         </>

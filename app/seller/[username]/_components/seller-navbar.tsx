@@ -23,22 +23,22 @@ import { api } from "@/convex/_generated/api"
 
 const components: { title: string; href: string; description: string }[] = [
     {
-        title: "Orders",
+        title: "Ordenes",
         href: "/docs/primitives/alert-dialog",
         description:
-            "A modal dialog that interrupts the user with important content and expects a response.",
+            "Un diálogo modal que interrumpe al usuario con contenido importante y espera una respuesta.",
     },
     {
-        title: "Gigs",
+        title: "Servicios",
         href: "/docs/primitives/hover-card",
         description:
-            "For sighted users to preview content available behind a link.",
+            "Para que los usuarios videntes obtengan una vista previa del contenido disponible detrás de un enlace.",
     },
     {
-        title: "Profile",
+        title: "Perfil",
         href: "/profile",
         description:
-            "Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.",
+            "Muestra un indicador que muestra el progreso de finalización de una tarea, generalmente mostrado como una barra de progreso.",
     }
 ]
 
@@ -60,7 +60,7 @@ export const SellerNavbar = () => {
                     </Button>
                     {currentUser && (
                         <Button variant={"ghost"} className="text-muted-foreground" onClick={() => router.push(`/`)}>
-                            Switch To Buying
+                            Cambiar a cliente
                         </Button>
                     )}
                     <UserButton />
@@ -77,7 +77,7 @@ export const SellerNavbar = () => {
                             </Link>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <NavigationMenuTrigger>My business</NavigationMenuTrigger>
+                            <NavigationMenuTrigger>Mis ofertas</NavigationMenuTrigger>
                             <NavigationMenuContent>
                                 <ul className="grid gap-3 p-6 md:w-[400px] lg:w-[500px] lg:grid-cols-[.75fr_1fr]">
                                     <li className="row-span-3">
@@ -88,25 +88,25 @@ export const SellerNavbar = () => {
                                             >
                                                 {/* <Image className="h-6 w-6" /> */}
                                                 <div className="mb-2 mt-4 text-lg font-medium">
-                                                    Orders
+                                                    Ordenes
                                                 </div>
                                                 <p className="text-sm leading-tight text-muted-foreground">
-                                                    Keep track of your orders and deliveries. Manage everythign at one place.
+                                                    Mantenga un registro de sus pedidos y entregas. Administre todo en un solo lugar.
                                                 </p>
                                             </a>
                                         </NavigationMenuLink>
                                     </li>
-                                    <ListItem href={`/seller/${currentUser?.username}/manage-gigs`} title="Gigs">
-                                        Manage, create and edit your gigs here.
+                                    <ListItem href={`/seller/${currentUser?.username}/manage-gigs`} title="Servicios">
+                                        Gestiona, crea y edita tus conciertos aquí.
                                     </ListItem>
-                                    <ListItem href={`/seller/${currentUser}/profile`} title="Profile">
-                                        Manage and edit your profile. Present yourself to the world.
+                                    <ListItem href={`/seller/${currentUser}/profile`} title="Perfil">
+                                        Gestiona y edita tu perfil. Preséntate al mundo.
                                     </ListItem>
                                 </ul>
                             </NavigationMenuContent>
                         </NavigationMenuItem>
                         <NavigationMenuItem>
-                            <NavigationMenuTrigger>Advertising & Growth</NavigationMenuTrigger>
+                            <NavigationMenuTrigger>Publicidad y crecimiento</NavigationMenuTrigger>
                             <NavigationMenuContent>
                                 <ul className="grid w-[400px] gap-3 p-4 md:w-[500px] md:grid-cols-2 lg:w-[600px] ">
                                     {components.map((component) => (
@@ -124,7 +124,7 @@ export const SellerNavbar = () => {
                         <NavigationMenuItem>
                             <Link href="/docs" legacyBehavior passHref>
                                 <NavigationMenuLink className={navigationMenuTriggerStyle()}>
-                                    Analytics
+                                    Analítica
                                 </NavigationMenuLink>
                             </Link>
                         </NavigationMenuItem>

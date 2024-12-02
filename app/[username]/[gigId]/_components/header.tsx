@@ -58,7 +58,7 @@ export const Header = ({ category, subcategory, editUrl, ownerId }: HeaderProps)
             {(currentUser?._id === ownerId &&
                 <Button variant={"secondary"}>
                     <Link href={editUrl}>
-                        Edit gig
+                        Editar servicio
                     </Link>
                 </Button>
             )}

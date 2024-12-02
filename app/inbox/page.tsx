@@ -18,10 +18,10 @@ const InboxPage = () => {
                 height={340}
             />
             <h2 className="text-2xl font-semibold mt-6 text-black">
-                Welcome to inbox!
+                !Bienvenido al inbox!
             </h2>
             <p className="text-muted-foreground text-sm mt-2">
-                Select a conversation or start a new one!
+                !Selecciona un chat para empezar a chatear o crea uno nuevo!
             </p>
         </div>
     );

@@ -36,21 +36,21 @@ export const ReviewsStats = ({ reviews }: ReviewsStatsProps) => {
     return (
         <div className="flex space-x-12">
             <div className="w-full md:w-1/2">
-                <p className='font-bold'>Average Review Score: {averageScore.toFixed(2)} stars</p>
+                <p className='font-bold'>Puntuación promedio de revisión: {averageScore.toFixed(2)} estrellas</p>
                 {starDistribution.map((count, index) => {
                     const starLevel = 5 - index; // Stars level (5, 4, 3, 2, 1)
                     const percentage = (count / maxReviews) * 100; // Calculate percentage for progress bar
 
                     return (
                         <div key={starLevel} className='flex space-x-2 items-center font-bold'>
-                            <Button variant={"ghost"} className='font-bold'>{starLevel} Stars ({count})</Button>
+                            <Button variant={"ghost"} className='font-bold'>{starLevel} Estrellas ({count})</Button>
                             <Progress value={percentage} />
                         </div>
                     );
                 })}
             </div>
             <div className="w-full md:w-1/2">
-                <p className="flex flex-col font-bold space-y-8">Rating Breakdown</p>
+                <p className="flex flex-col font-bold space-y-8">Desglose de calificación</p>
                 {Object.entries(ratingBreakdown).map(([label, value], index) => (
                     <p key={index} className="flex items-center text-gray-600 font-semibold mt-2">
                         <span className="mr-2">{label}:</span>

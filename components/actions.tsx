@@ -65,14 +65,14 @@ export const Actions = ({
                     className="p-3 cursor-pointer"
                 >
                     <Link2 className="h-4 w-4 mr-2" />
-                    Copy board link
+                    Copiar enlace del tablero
                 </DropdownMenuItem>
                 <DropdownMenuItem
                     onClick={() => onOpen(id, title)}
                     className="p-3 cursor-pointer"
                 >
                     <Pencil className="h-4 w-4 mr-2" />
-                    Rename
+                    Renombrar
                 </DropdownMenuItem>
                 <ConfirmModal
                     header="Delete board?"
@@ -85,7 +85,7 @@ export const Actions = ({
                         className="p-3 cursor-pointer text-sm w-full justify-start font-normal"
                     >
                         <Trash2 className="h-4 w-4 mr-2" />
-                        Delete
+                        Borrar
                     </Button>
                 </ConfirmModal>
             </DropdownMenuContent>

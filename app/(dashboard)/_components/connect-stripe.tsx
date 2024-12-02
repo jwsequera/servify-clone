@@ -23,7 +23,7 @@ const ConnectStripe = () => {
             }}
             variant={"secondary"}
         >
-            Connect stripe
+            Conectar a stripe
         </Button>
     </div>;
 }

@@ -43,7 +43,7 @@ export const ReviewBox = ({ review }: ReviewBoxProps) => {
             </div>
             <Separator orientation='vertical' />
             <div className='w-[600px]'>
-                <p className='text-muted-foreground'>Ordered:</p>
+                <p className='text-muted-foreground'>Ordenado:</p>
                 <div className='flex space-x-4 items-center'>
                     <div className='w-[300px]'>
                         <AspectRatio ratio={16 / 9}>

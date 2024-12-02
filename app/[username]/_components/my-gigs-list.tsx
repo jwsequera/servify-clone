@@ -23,7 +23,7 @@ export const MyGigsList = ({
 }: MyGigsListProps) => {
     const gigs = useQuery(api.gigs.getGigsWithImages, { sellerUsername: sellerUsername });
     if (gigs === undefined) {
-        return <div>Loading...</div>
+        return <div>Cargando...</div>
     }
 
     return (

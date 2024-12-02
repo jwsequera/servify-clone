@@ -10,10 +10,10 @@ export const EmptySearch = () => {
                 height={340}
             />
             <h2 className="text-2xl font-semibold mt-6">
-                No results found
+                No se encontraron resultados
             </h2>
             <p className="text-muted-foreground text-sm mt-2">
-                Try searching for something else
+                Prueba con otros términos de búsqueda
             </p>
         </div>
     );

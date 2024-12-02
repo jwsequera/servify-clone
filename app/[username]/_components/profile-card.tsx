@@ -17,7 +17,7 @@ export const ProfileCard = ({
     const country = useQuery(api.users.getCountryByUsername, { username: seller.username });
 
     if (languages === undefined || country === undefined) {
-        return <div>Loading...</div>
+        return <div>Cargando...</div>
     }
 
     const languagesString = languages.map((language) => language.language).join(", ");

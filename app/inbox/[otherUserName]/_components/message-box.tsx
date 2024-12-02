@@ -18,7 +18,7 @@ const MessageBox: React.FC<MessageBoxProps> = ({
 }) => {
     const currentUser = useQuery(api.users.getCurrentUser);
     if (currentUser === undefined) {
-        return <div>Loading...</div>
+        return <div>Cargando...</div>
     }
 
     if (currentUser === null) return null;

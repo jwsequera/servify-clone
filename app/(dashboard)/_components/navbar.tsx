@@ -53,13 +53,25 @@ const Navbar = () => {
         <>
             <Separator />
             <div className="flex items-center gap-x-4 p-5 bg-white">
+                <div className="hidden lg:flex">
+                    <Link href="/"> {/* Link to the homepage */}
+                        <a className="flex items-center p-2"> {/* Wrap logo in a link */}
+                            <img
+                                src="logo.jpg"
+                                alt="Servify"
+                                className="w-10 h-10 mr-2"
+                            />
+
+                        </a>
+                    </Link>
+                </div>
                 <div className="hidden lg:flex lg:flex-1">
                     <SearchInput />
                 </div>
                 <Dialog>
                     <DialogTrigger>
                         <TooltipProvider
-                            text="Filter"
+                            text="Filtrar"
                         >
                             <Filter className="mx-4 my-3" />
                         </TooltipProvider>
@@ -74,7 +86,7 @@ const Navbar = () => {
                                     className="text-red-500"
                                     disabled={!filter}
                                 >
-                                    Clear filters
+                                    Limpiar filtros
                                 </Button>
                                 {categories.map((category, index) => (
                                     <div key={index} className="p-4 bg-white rounded-lg shadow-md">
@@ -98,7 +110,7 @@ const Navbar = () => {
 
                 {currentUser && (
                     <>
-                        <TooltipProvider text="Favorites">
+                        <TooltipProvider text="Favoritos">
                             <Button
                                 asChild
                                 variant={favorites ? "secondary" : "ghost"}
@@ -124,7 +136,7 @@ const Navbar = () => {
                         </TooltipProvider>
 
                         <Button onClick={() => router.push(`/seller/${currentUser.username}/manage-gigs`)}>
-                            Switch To Selling
+                            Mis servicios
                         </Button>
                         {!currentUser.stripeAccountSetupComplete &&
                             <ConnectStripe />

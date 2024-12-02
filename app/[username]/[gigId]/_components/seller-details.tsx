@@ -65,26 +65,26 @@ export const SellerDetails = ({
                     </div>
                 </div>
             </div>
-            <Button variant={"outline"} onClick={handleContactClick}>Contact me</Button>
+            <Button variant={"outline"} onClick={handleContactClick}>Contacto</Button>
             <div className="border border-black/20 p-4 space-y-3 rounded-2xl">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4">
                     <div>
-                        <p className="font-semibold">From</p>
+                        <p className="font-semibold">Desde</p>
                         <p>{seller.country.countryName}</p>
                     </div>
                     <div>
-                        <p className="font-semibold">Joined</p>
+                        <p className="font-semibold">Unido</p>
                         <p>{joinedDate}</p>
                     </div>
                     {(timeAgo !== undefined) && (
-                        <div>
-                            <p className="font-semibold">Last delivery</p>
+                        <div>Last deliveryLanguages
+                            <p className="font-semibold">Última entrega</p>
                             <p>{timeAgo}</p>
                         </div>
                     )}
                     {(languages.length > 0) && (
                         <div>
-                            <p className="font-semibold">Languages</p>
+                            <p className="font-semibold">Idiomas</p>
                             <p>{languagesString}</p>
                         </div>
                     )}
